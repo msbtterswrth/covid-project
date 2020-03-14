@@ -18,6 +18,11 @@
                 background:none;
                 border-color: $gray; 
             }
+            .btn-link {
+                &::after {
+                    color: $primary;
+                }
+            }
         }
         &.primary {
             background:$primary;
@@ -35,6 +40,11 @@
                     }
                 }
             }
+            .btn-link {
+                &::after {
+                    color: $secondary;
+                }
+            }
         }
         &.secondary {
             background:$secondary;
@@ -49,8 +59,13 @@
                     text-decoration: underline;  
                     &:hover, &:focus {
                         color: $dk-gray;
-                        text-decoration-color: $teal;
+                        text-decoration-color: $primary;
                     }
+                }
+            }
+            .btn-link {
+                &::after {
+                    color: $primary;
                 }
             }
         }
@@ -68,6 +83,11 @@
                     &:hover, &:focus {
                         color: #fff;
                     }
+                }
+            }
+            .btn-link {
+                &::after {
+                    color: $secondary;
                 }
             }
         }
