@@ -24,6 +24,7 @@
             }
             .inner {
                 padding-left: 20px;
+                position: relative;
                 @include breakpoint(sm-max) {
                     border: none;
                     border-top: 5px solid $gold;
@@ -32,12 +33,32 @@
                 }
                 &::before {
                     left: 0;
+                    background: $gold;
+                    content: "";
+                    position: absolute;
+                    height: calc(100% - 10px);
+                    top: 10px;
+                    width: 5px;
+                    @include breakpoint(sm-max) {
+                        display: none;
+                    }
+                }
+                p {
+                    color:$dk-blue;
+                    font-size: 16px;
+                    line-height: 24px;
                 }
                 + a {
                     margin-left:20px;
                     @include breakpoint(sm-max) {
                         margin: 15px 0 0 0;
                     }
+                }
+            }
+            .img {
+                border: 10px solid $gray;
+                img {
+                    width: 100%;
                 }
             }
         }
@@ -68,6 +89,7 @@
             }
             .inner {
                 padding-right: 20px;
+                position: relative;
                 @include breakpoint(sm-max) {
                     border-top: 5px solid $gold;
                     margin-top: 20px;
@@ -75,6 +97,20 @@
                 }
                 &::before {
                     right: 0;
+                    background: $gold;
+                    content: "";
+                    position: absolute;
+                    height: calc(100% - 10px);
+                    top: 10px;
+                    width: 5px;
+                    @include breakpoint(sm-max) {
+                        display: none;
+                    }
+                }
+                p {
+                    color:$dk-blue;
+                    font-size: 16px;
+                    line-height: 24px;
                 }
                 + a {
                     margin-right:20px;
@@ -83,31 +119,12 @@
                     }
                 }
             }
-        }
-    }
-    .inner {
-        position: relative;
-        &::before {
-            background: $gold;
-            content: "";
-            position: absolute;
-            height: calc(100% - 10px);
-            top: 10px;
-            width: 5px;
-            @include breakpoint(sm-max) {
-                display: none;
+            .img {
+                border: 10px solid $gray;
+                img {
+                    width: 100%;
+                }
             }
-        }
-        p {
-            color:$dk-blue;
-            font-size: 16px;
-            line-height: 24px;
-        }
-    }
-    .img {
-        border: 10px solid $gray;
-        img {
-            width: 100%;
         }
     }
 }

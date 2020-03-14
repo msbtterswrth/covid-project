@@ -1,5 +1,5 @@
 {% block content %}
-{% set position = paragraph.field_image_position.value %}
+{% set position = paragraph.field_image_pos.value %}
 {% if position == 'background' %}
     {% set bg = "background:url({{ file_url(paragraph.field_image.entity.uri.value) }}) no-repeat" %}
 {% endif %}
