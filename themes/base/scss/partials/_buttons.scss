@@ -28,85 +28,57 @@
                 color:#fff;
             }
         }
-        &.blue {
-            background:$blue;
+        &.primary {
+            background:$primary;
             color:#fff;
             &:hover, &:focus {
-                background: darken($blue, 10%);
+                background: darken($primary, 10%);
                 &::after {
                     width: 100%;
                 }
             }
             &.outline {
-                border-color: $blue;
-                color: $blue;
+                border-color: $primary;
+                color: $primary;
                 &:hover, &:focus {
-                    background: $blue;
+                    background: $primary;
                     color: #fff;
                 }
             }
         }
-        &.gold {
-            background: $gold;
-            color:$dk-blue;
+        &.secondary {
+            background: $secondary;
+            color:$dk-gray;
             &:hover, &:focus {
-                background: darken($gold, 10%);
+                background: darken($secondary, 10%);
                 &::after {
                     width: 100%;
                 }
             }
             &.outline {
-                border-color: $gold;
-                color: $gold;
+                border-color: $secondary;
+                color: $secondary;
                 &:hover, &:focus {
-                    background: $gold;
+                    background: $secondary;
+                    color: $dk-gray;
+                }
+            }
+        }
+        &.tertiary {
+            background:$tertiary;
+            color: #fff;
+            &:hover, &:focus {
+                background: darken($tertiary, 10%);
+                &::after {
+                    width: 100%;
+                }
+            }
+            &.outline {
+                border-color: $tertiary;
+                color: $tertiary;
+                &:hover, &:focus {
+                    background: $tertiary;
                     color: #fff;
-                }
-            }
-        }
-        &.dk-blue {
-            background:$dk-blue;
-            color:$gold;
-            &:hover, &:focus {
-                background: darken($dk-blue, 10%);
-                &::after {
-                    width: 100%;
-                }
-            }
-            &.outline {
-                border-color: $dk-blue;
-                color: $dk-blue;
-                &:hover, &:focus {
-                    background: $dk-blue;
-                    color: $gold;
-                }
-            }
-        }
-        &.teal {
-            background:$teal;
-            color:#fff;
-            &:hover, &:focus {
-                background: darken($teal, 10%);
-                &::after {
-                    width: 100%;
-                }
-            }
-            &.outline {
-                border-color: $teal;
-                color: $teal;
-                &:hover, &:focus {
-                    background: $teal;
-                    color: #fff;
-                }
-            }
-        }
-        &.red {
-            background:$red;
-            color:#fff;
-            &:hover, &:focus {
-                background: darken($red, 10%);
-                &::after {
-                    width: 100%;
                 }
             }
         }
@@ -133,13 +105,23 @@
         }
         &.link {
             background:transparent;
-            color: $teal;
-            font-weight: 400;
+            color: $dk-gray;
+            font-size: 18px;
+            font-weight: 800;
             margin: 0;
-            padding: 10px 0 0 0;
+            padding: 0 50px 0 0;
+            position: relative;
             text-align: left;
+            &::after {
+                content: "\e901";
+                position: absolute;
+                right: 15px;
+                @include transition(right .3s $cubic);
+            }
             &:hover, &:focus {
-                color: darken($teal, 10%);
+                &::after {
+                    right:0;
+                }
             }
         }
     }
