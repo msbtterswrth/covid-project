@@ -164,6 +164,20 @@ body {
                 break-inside: avoid;
             }
         }
+        &.three-col {
+            columns:3;
+            column-gap: 60px;
+            list-style-type: none;
+            padding:0;
+            @include breakpoint(xs) {
+                columns:1;
+            } 
+            li {
+                border-bottom: 1px solid $lt-gray;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
         &.blue {
             list-style-type: none;
             padding:0;
