@@ -7,7 +7,7 @@
         {% for accordion in paragraph.field_items %}
             <div class="accordion-item">
                 <h4{{ title_attributes }}>{{ accordion.entity.field_title.value }}</h4>
-                <div>{{ accordion.entity.field_blurb.value|raw }}</div>
+                <div>{{ accordion.entity.field_blurb }}</div>
             </div>
         {% endfor %}
     </div>
