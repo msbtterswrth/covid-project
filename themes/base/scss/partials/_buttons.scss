@@ -113,7 +113,9 @@
             position: relative;
             text-align: left;
             &::after {
+                color: $secondary;
                 content: "\e901";
+                font-family: icomoon;
                 position: absolute;
                 right: 15px;
                 @include transition(right .3s $cubic);
