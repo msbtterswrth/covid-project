@@ -1,5 +1,16 @@
 .hero {
     position: relative;
+    &:not(.has-img) {
+        background: $lt-gray;
+        color: $dk-gray;
+        padding:60px 0;
+        .blurb {
+            color: $dk-gray;
+            position: relative;            
+            top: 0;
+            @include translate(0,0);
+        }
+    }
     .img {
         position: relative;
         &::before {
