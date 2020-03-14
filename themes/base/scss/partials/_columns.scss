@@ -33,7 +33,7 @@
             }
         }
         &.left {
-            grid-template-columns: 60% 40%;%;
+            grid-template-columns: 60% 40%;
             @include breakpoint(xs) {            
                 grid-template-columns: repeat(1, 1fr);
             }
@@ -58,6 +58,7 @@
         }
     }
     .text {
+        height: 100%;
         margin: 0;
     }
 }
