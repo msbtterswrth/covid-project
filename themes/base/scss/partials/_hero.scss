@@ -12,8 +12,15 @@
         position: absolute;
         width: 100%;
         z-index: 1;
+        &.center {
+            .inner {
+                margin: 0 auto;
+                text-align: center;
+                width:80%;
+            }
+        }
         h1 {
-            color: $primary;
+            color: #fff;
             font-size: 45px;
             font-weight: 700;
             line-height: 58px;
