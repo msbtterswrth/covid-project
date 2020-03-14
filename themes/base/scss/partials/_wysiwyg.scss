@@ -13,14 +13,14 @@
             }
         }
         &.gray {
-            background:$gray;
+            background:$lt-gray;
             &.outline {
                 background:none;
-                border-color: $gray; 
+                border-color: $lt-gray; 
             }
             .btn.link {
                 &::after {
-                    color: $primary;
+                    color: $tertiary;
                 }
             }
         }

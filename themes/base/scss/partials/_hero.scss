@@ -1,6 +1,9 @@
 .hero {
     margin-bottom: 60px;
     position: relative;
+    @include breakpoint(sm-max) {
+        margin-bottom: 30px;
+    }
     &:not(.has-img) {
         background: $lt-gray;
         color: $dk-gray;
