@@ -119,6 +119,11 @@
                 &::after {
                    right:10px; 
                 }
+                &:hover, &:focus {
+                    &::after {
+                        right: 0;
+                    }
+                }
             }
         }
     }
