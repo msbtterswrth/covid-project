@@ -1,10 +1,17 @@
 .cta {
-    display: grid;
-    place-items: start stretch;
-    justify-content: stretch;
-    grid-auto-flow: dense;
-    margin-bottom: 50px;
+    &.top {
+        background: $lt-gray;
+        padding: 20px;
+        .img {
+            margin-bottom: 20px;
+        }
+    }
     &.left {
+        display: grid;
+        place-items: start stretch;
+        justify-content: stretch;
+        grid-auto-flow: dense;
+        margin-bottom: 50px;
         grid-template-columns: 52% 48%;
         @include breakpoint(sm-max) {
             grid-template-columns: 100%;            
@@ -36,6 +43,11 @@
         }
     }
     &.right {
+        display: grid;
+        place-items: start stretch;
+        justify-content: stretch;
+        grid-auto-flow: dense;
+        margin-bottom: 50px;
         grid-template-columns: 48% 52%;
         @include breakpoint(sm-max) {
             grid-template-columns: 100%;            
