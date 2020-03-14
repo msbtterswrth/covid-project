@@ -31,8 +31,6 @@
   {{ title_prefix }}
   {{ title_suffix }}
   {% block content %}
-    <div class="sidebar-cta">
-        {{content.field_sidebar_cta}}
-    </div>
+    {{content.field_sidebar}}
   {% endblock %}
 </div>
