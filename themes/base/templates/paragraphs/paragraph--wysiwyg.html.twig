@@ -5,7 +5,7 @@
     {% set heading = "h2" %}
 {% endif %}
 {% if paragraph.field_background_color.value %}
-    {% set bg = " has-bg" ~ paragraph.field_background_color.value %}
+    {% set bg = " has-bg " ~ paragraph.field_background_color.value %}
 {% endif %}
     <div class="text {{bg}}">
         {% if content.field_title %}
