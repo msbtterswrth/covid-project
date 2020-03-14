@@ -29,14 +29,14 @@
             }
         }
         span {
-            color:$secondary;
+            color:$primary;
             letter-spacing:1px;
             text-transform:uppercase;
             position: relative;
             &::before {
                 content: "";
                 height: 3px;
-                background: $secondary;
+                background: $primary;
                 width: 100%;
                 bottom: calc(100% + 9px);
                 left: 0;
