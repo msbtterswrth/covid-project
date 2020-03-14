@@ -18,7 +18,7 @@
                 background:none;
                 border-color: $gray; 
             }
-            .btn-link {
+            .btn.link {
                 &::after {
                     color: $primary;
                 }
@@ -40,7 +40,7 @@
                     }
                 }
             }
-            .btn-link {
+            .btn.link {
                 &::after {
                     color: $secondary;
                 }
@@ -63,7 +63,7 @@
                     }
                 }
             }
-            .btn-link {
+            .btn.link {
                 &::after {
                     color: $primary;
                 }
@@ -85,7 +85,7 @@
                     }
                 }
             }
-            .btn-link {
+            .btn.link {
                 &::after {
                     color: $secondary;
                 }
