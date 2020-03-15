@@ -36,22 +36,10 @@
   {{ title_suffix }}
   {% block content %}
     <div class="social-share clearfix">
-        {% set facebook = content.show_facebook[0]|length > 0 ? 'Yes' : 'Yes' %}
-        {% set twitter = content.show_twitter[0]|length > 0 ? 'Yes' : 'Yes' %}
-        {% set email = content.show_email[0]|length > 0 ? 'Yes' : 'Yes' %}
-        {% set link = content.show_link[0]|length > 0 ? 'Yes' : 'Yes' %}
-        {% if facebook == 'Yes' %}
             <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>') }}" onclick="{{ openWindow }}"><i class="icon-facebook"></i></a>
-        {% endif %}
-        {% if twitter == 'Yes' %}
             <a class="twitter" href="https://twitter.com/intent/tweet?url={{ url('<current>') }}" ><i class="icon-twitter"></i></a>
-        {% endif %}
-        {% if email == 'Yes' %}
-            <a class="email" href="mailto:?subject=Bluewave%20Crowd%20Sourcebody={{ url('<current>') }}" target="_blank"><i class="icon-send"></i></a>
-        {% endif %}
-        {% if link == 'Yes' %}
+            <a class="email" href="mailto:?body={{ url('<current>') }}" target="_blank"><i class="icon-send"></i></a>
             <div class="copy-link" data-clipboard-text="{{ url('<current>') }}"><i class="icon-bookmark"></i></div>
-        {% endif %}
     </div>
   {% endblock %}
 </div>
