@@ -97,7 +97,7 @@
                   }
                 });                      
                 $('.accordions h4').click(function() {
-                  var height = $(this).next('div').prop('scrollHeight');
+                  var height = $(this).next('div').prop('scrollHeight') + 20;
                   console.log(height);
                   $(this).toggleClass('open');
                   $(this).siblings().removeClass('open');

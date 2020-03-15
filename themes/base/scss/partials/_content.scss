@@ -56,7 +56,6 @@
                             }
                             + div {
                                 border-color: $tertiary;
-                                padding: 10px;
                             }
                         }
                         + div {
@@ -64,8 +63,9 @@
                                 border: 2px solid transparent;
                                 max-height: 0;
                                 overflow: hidden;
-                                padding: 0 10px;
-                                @include transition(padding .3s $cubic);
+                                nav {
+                                    padding: 10px;
+                                }
                             }
                         }
                     }
