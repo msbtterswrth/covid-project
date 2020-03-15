@@ -23,7 +23,7 @@
             .sidebar {
                 &.bottom {
                     @include breakpoint(sm-max) {
-                        margin-top: 30xp;
+                        margin-top: 30px;
                     }
                 }
                 .nav {
@@ -129,6 +129,9 @@
             }
             + .footer {
                 margin-top:80px;
+                @include breakpoint(sm-max) {
+                    margin-top: 20px;
+                }
             }
         }
     }
