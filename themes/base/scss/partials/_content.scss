@@ -27,9 +27,13 @@
                     }
                 }
                 .nav {
-                    border-left: 5px solid $gold;
+                    border-left: 5px solid $tertiary;
                     margin-bottom: 30px;
                     padding:0 0 0 20px;
+                    @include breakpoint(sm-max) {
+                        border: none;
+                        padding: 0;
+                    }
                     .nav-toggle {
                         background: $tertiary;
                         color: #fff;

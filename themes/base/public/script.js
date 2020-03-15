@@ -86,6 +86,7 @@
         attach: function(context) {
             if (this._isInvokedByDocumentReady) {  
                 $(".nav-toggle").click(function() {
+                  var height = $(this).next('div').prop('scrollHeight');
                   $(this).toggleClass('open');
                   $(this).siblings('div').css('max-height', 0);
                   if ($(this).hasClass('open')) {    
