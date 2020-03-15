@@ -23,6 +23,7 @@
             .sidebar {
                 .nav {
                     border-left: 5px solid $gold;
+                    margin-bottom: 30px;
                     padding:0 0 0 20px;
                     .nav-toggle {
                         display:none;
@@ -56,7 +57,7 @@
                                             margin:10px 0 0 10px;
                                             .level-3 {
                                                 > ul {
-                                                    border-left: 2px solid lighten($teal,10%);
+                                                    border-left: 2px solid lighten($tertiary,10%);
                                                     margin:10px 0 0 10px;       
                                                     padding-left: 10px;
                                                     .level-4 {
@@ -73,12 +74,12 @@
                             a {
                                 font-size: 16px;
                                 line-height: 21px;
-                                color: $teal;
+                                color: $dk-gray;
                                 &:hover, &:focus {
-                                    color:$dk-blue;
+                                    color:$tertiary;
                                 }
                                 &.is-active {
-                                    color:$dk-blue;
+                                    color:$tertiary;
                                 }
                             }
                         }
