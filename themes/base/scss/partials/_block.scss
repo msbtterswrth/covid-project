@@ -1,17 +1,12 @@
 .site-wrap {
     .social-share {
-        position: fixed;
-        left: 0;
+        position: relative;
         z-index: 1;
-        @include breakpoint(xs) {
-            position: relative;
-            margin:20px 0;
-        }
         > * {
             color: #fff;
-            display: block;
+            display: inline-block;
             line-height: 43px;
-            font-size: 20px;
+            font-size: 25px;
             text-align: center;
             text-decoration: none !important;
             width: 40px;
@@ -35,14 +30,14 @@
                 }
             }
             &.email {
-                background:#323a45;
+                background:$tertiary;
                 &:hover, &:focus {
                     color:#fff;
                     background:darken(#323a45,10%);
                 }
             }
             &.copy-link {
-                background:$dk-gray;
+                background:$green;
                 cursor: pointer;
                 position: relative;
                 &:hover, &:focus {

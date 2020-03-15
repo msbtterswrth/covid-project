@@ -36,10 +36,10 @@
   {{ title_suffix }}
   {% block content %}
     <div class="social-share clearfix">
-            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>') }}" onclick="{{ openWindow }}"><i class="icon-facebook"></i></a>
-            <a class="twitter" href="https://twitter.com/intent/tweet?url={{ url('<current>') }}" ><i class="icon-twitter"></i></a>
-            <a class="email" href="mailto:?body={{ url('<current>') }}" target="_blank"><i class="icon-send"></i></a>
-            <div class="copy-link" data-clipboard-text="{{ url('<current>') }}"><i class="icon-bookmark"></i></div>
+        <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('<current>') }}" onclick="{{ openWindow }}"><i class="icon-facebook"></i></a>
+        <a class="twitter" href="https://twitter.com/intent/tweet?url={{ url('<current>') }}" ><i class="icon-twitter"></i></a>
+        <a class="email" href="mailto:?body={{ url('<current>') }}" target="_blank"><i class="icon-send"></i></a>
+        <div class="copy-link" data-clipboard-text="{{ url('<current>') }}"><i class="icon-retweet"></i></div>
     </div>
   {% endblock %}
 </div>
