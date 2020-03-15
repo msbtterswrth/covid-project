@@ -86,8 +86,14 @@
         attach: function(context) {
             if (this._isInvokedByDocumentReady) {  
                 $(".nav-toggle").click(function() {
-                    $("body").toggleClass("nav-open");
-                    $("body").removeClass("search-open");
+                  $(this).toggleClass('open');
+                  $(this).siblings('div').css('max-height', 0);
+                  if ($(this).hasClass('open')) {    
+                    $(this).next('div').css('max-height', height);
+                  }
+                  else {
+                     $(this).next('div').css('max-height', 0); 
+                  }
                 });                      
                 $('.accordions h4').click(function() {
                   var height = $(this).next('div').prop('scrollHeight');

@@ -31,9 +31,31 @@
                     margin-bottom: 30px;
                     padding:0 0 0 20px;
                     .nav-toggle {
+                        background: $tertiary;
+                        color: #fff;
                         display:none;
+                        letter-spacing: 1px;
+                        padding: 5px 10px;
+                        position: relative;
+                        text-transform: uppercase;
                         @include breakpoint(sm-max) {
                             display: block;
+                        }
+                        &::after {
+                            content: "\e906";
+                            font-family: icomoon;
+                            float: right;
+                        }
+                        &.open {
+                            &::after {
+                                content: "\e5cd";
+                            }
+                        }
+                        + div {
+                            @include breakpoint(sm-max) {
+                                max-height: 0;
+                                overflow: hidden;
+                            }
                         }
                     }
                     ul:not(.contextual-links) {
