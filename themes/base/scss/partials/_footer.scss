@@ -3,6 +3,9 @@
     color: #fff;
     margin-top: 60px;
     padding:45px 0;
+    @include breakpoint(sm-max) {
+        padding: 25px 15px;
+    }
     p {
         color: #fff;
         font-size:16px;
