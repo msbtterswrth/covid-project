@@ -1,0 +1,22 @@
+.cv-count {
+    display: grid;
+    grid: auto/repeat(3, 1fr);
+    grid-gap: 15px;
+    > div {
+        background: $dk-gray;
+        color: #fff;
+        font-family: $font-lm;
+        font-size: 50px;
+        padding: 20px;
+        text-align: center;
+        &.current {
+            color: $secondary;
+        }
+        &.deaths {
+            color: $primary;
+        }
+        &.tested {
+            color: $green;
+        }
+    }
+}
