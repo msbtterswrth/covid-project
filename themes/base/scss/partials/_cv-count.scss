@@ -9,15 +9,20 @@
         font-size: 50px;
         overflow: hidden;
         padding: 20px;
+        position: relative;
         text-align: center;
         &::after {
             position: absolute;
-            bottom: 0;
+            bottom: -50px;
             left: 0;
             font-size: 14px;
             text-align: center;
             width: 100%;
             @include transition(bottom .3s $cubic);
+            @include breakpoint(sm-max) {
+                position: relative;
+                bottom: auto;
+            }
         }
         &:hover, &:focus {            
             &::after {
