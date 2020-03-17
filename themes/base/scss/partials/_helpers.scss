@@ -44,6 +44,9 @@
                 bottom: calc(100% + 9px);
                 left: 0;
                 position: absolute;
+                @include breakpoint(sm-max) {
+                    display:none;
+                }
             }
         }
     }

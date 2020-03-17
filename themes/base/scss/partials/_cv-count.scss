@@ -20,8 +20,9 @@
             width: 100%;
             @include transition(bottom .3s $cubic);
             @include breakpoint(sm-max) {
-                position: relative;
                 bottom: auto;
+                display: block;
+                position: relative;
             }
         }
         &:hover, &:focus {            
