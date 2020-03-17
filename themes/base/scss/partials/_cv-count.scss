@@ -7,16 +7,45 @@
         color: #fff;
         font-family: $font-lm;
         font-size: 50px;
+        overflow: hidden;
         padding: 20px;
         text-align: center;
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            @include transition(bottom .3s $cubic);
+        }
+        &:hover, &:focus {            
+            &::after {
+                bottom: 10px;
+            }
+        }
         &.current {
             color: $secondary;
+            &::after {                
+                content: "infected";
+            }
         }
         &.deaths {
             color: $primary;
+            &::after {                
+                content: "deaths";
+            }
         }
         &.tested {
             color: $green;
+            &::after {                
+                content: "tested";
+            }
         }
+    }
+    + .disclaimer {
+        font-size: 14px;
+        margin: 20px 0 40px;
+        text-align: center;
     }
 }
