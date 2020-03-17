@@ -1,0 +1,23 @@
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+{% if paragraph.field_current_total.value %}
+    {% set current = paragraph.field_current_total.value %}
+{% endif %}
+{% if paragraph.field_total_deaths.value %}
+    {% set death = paragraph.field_total_deaths.value %}
+{% endif %}
+{% if paragraph.field_total_tested.value %}
+    {% set tested = paragraph.field_total_tested.value %}
+{% endif %}
+    <div class="cv-count">
+        {% if current %}
+            <div class="current">{{current}}</div>
+        {% endif %}
+        {% if death %}
+            <div class="deaths">{{death}}</div>
+        {% endif %}
+        {% if tested %}
+            <div class="tested">{{tested}}</div>
+        {% endif %}
+    </div>
+{% endblock %} 
