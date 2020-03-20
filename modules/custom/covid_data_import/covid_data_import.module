@@ -1,0 +1,126 @@
+<?php
+
+  /**
+   * @file
+   * Contains covid_data_import/updates.module.
+   */
+
+  use Drupal\Core\Routing\RouteMatchInterface;
+  use Drupal\node\Entity\Node;
+  use Drupal\paragraphs\Entity\Paragraph;
+
+  /**
+   * Implements hook_help().
+   */
+  function covid_data_import_help($route_name, RouteMatchInterface $route_match) {
+    switch ($route_name) {
+      // Main module help for the covid data import module
+      case 'help.page.covid_data_import':
+        $output = '';
+        $output .= '<h3>' . t('About') . '</h3>';
+        $output .= '<p>' . t('Pull updates for states and fed stats via JSON feed') . '</p>';
+        return $output;
+
+      default:
+    }
+  }
+
+  /**
+   * Implements hook_cron().
+   */
+
+  function covid_data_import_cron() {
+    // Get the JSON feed
+    $client = \Drupal::httpClient();
+    $stateData = [];
+    $usData = [];
+    try {
+     $response = $client->get('https://covidtracking.com/api/states'); // states only
+    // https://covidtracking.com/api/us --- for full US
+    //$response = $client->get('http://covid.jaydev/states.json');
+    $stateData = json_decode($response->getBody());  // for JSON content
+    } catch (RequestException $e) {
+      $errorMessage = $e->getMessage();
+      \Drupal::logger('covid_data_import')->error($errorMessage);
+    }
+
+    if (sizeof($stateData) > 0) {
+
+      /**
+       * Fetch paragraph fields with an associated state code...
+       */
+      $database = \Drupal::database();
+      $result = $database->query("SELECT soft_paragraph__field_state_code.entity_id,
+        soft_paragraph__field_state_code.field_state_code_value,
+        soft_paragraph__field_current_total.field_current_total_value,
+        soft_paragraph__field_total_deaths.field_total_deaths_value,
+        soft_paragraph__field_total_tested.field_total_tested_value
+        from
+        soft_paragraph__field_state_code, soft_paragraph__field_total_deaths,
+        soft_paragraph__field_total_tested, soft_paragraph__field_current_total
+        where
+        soft_paragraph__field_state_code.entity_id = soft_paragraph__field_total_deaths.entity_id
+        AND
+        soft_paragraph__field_state_code.entity_id = soft_paragraph__field_current_total.entity_id
+        AND
+        soft_paragraph__field_state_code.entity_id = soft_paragraph__field_total_tested.entity_id");
+
+      if ($result) {
+        while ($row = $result->fetchAssoc()) {
+          $entity_id = $row['entity_id'];
+          $current_state = $row['field_state_code_value'];
+          $current_infected = intval($row['field_current_total_value']);
+          $current_deaths = intval($row['field_total_deaths_value']);
+          $current_tested = intval($row['field_total_tested_value']);
+
+          for ($i = 0; $i < count($stateData); $i++) {
+            if ($stateData[$i]->state == $current_state) {
+              $new_tested = intval($stateData[$i]->total);
+              $new_infected = intval($stateData[$i]->positive);
+              $new_deaths = intval($stateData[$i]->death);
+
+              if ($new_infected != $current_infected) {
+                update_infected($entity_id, $new_infected);
+                \Drupal::logger('covid_data_import')
+                  ->notice('For State ' . $current_state . ' - new infected total: ' . $new_infected .', prior was: ' . $current_infected);
+              }
+              if ($new_tested != $current_tested) {
+                update_tested($entity_id, $new_tested);
+                \Drupal::logger('covid_data_import')
+                  ->notice('For State ' . $current_state . ' - new tested count: ' . $new_tested .', prior was ' . $current_tested);
+              }
+              if ($new_deaths != $current_deaths) {
+                update_deaths($entity_id, $new_deaths);
+                \Drupal::logger('covid_data_import')
+                  ->notice('For State ' . $current_state . ' - new # of deaths: ' . $new_deaths . ', prior was ' . $current_deaths);
+              }
+              break;
+            }
+          }
+        }
+        drupal_flush_all_caches(); //make sure that the caches are cleared so that people see the new totals
+      }
+    }
+    else {
+      \Drupal::logger('covid_data_import')
+        ->notice('There were no new state updates applied in this cron run');
+    }
+  }
+
+  function update_infected($entity_id, $value) {
+    $database = \Drupal::database();
+    $result = $database->query('UPDATE soft_paragraph__field_current_total set field_current_total_value = :val WHERE entity_id = :etid', array(':val' => $value, ':etid' => $entity_id));
+    $result = $database->query('UPDATE soft_paragraph_revision__field_current_total set field_current_total_value = :val WHERE entity_id = :etid', array(':val' => $value, ':etid' => $entity_id));
+  }
+
+  function update_tested($entity_id, $value) {
+    $database = \Drupal::database();
+    $result = $database->query('UPDATE soft_paragraph__field_total_tested set field_total_tested_value = :val WHERE entity_id = :etid', array(':val' => $value, ':etid' => $entity_id));
+    $result = $database->query('UPDATE soft_paragraph_revision__field_total_tested set field_total_tested_value = :val WHERE entity_id = :etid', array(':val' => $value, ':etid' => $entity_id));
+  }
+
+  function update_deaths($entity_id, $value) {
+    $database = \Drupal::database();
+    $result = $database->query('UPDATE soft_paragraph__field_total_deaths set field_total_deaths_value = :val WHERE entity_id = :etid', array(':val' => $value, ':etid' => $entity_id));
+    $result = $database->query('UPDATE soft_paragraph_revision__field_total_deaths set field_total_deaths_value = :val WHERE entity_id = :etid', array(':val' => $value, ':etid' => $entity_id));
+  }

@@ -1,0 +1,8 @@
+name: Covid Data Import
+type: module
+description: Import JSON data into paragraphs from https://covidtracking
+  .com/api/states and https://covidtracking.com/api/us for live site covid19-project.org/
+core: 8.x
+package: Custom
+
+version: '8.x-1.0-beta'
