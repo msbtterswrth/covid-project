@@ -134,5 +134,10 @@
                 }
             }
         }
+        &.feature {            
+            + .footer {
+                margin-top:0;
+            }
+        }
     }
 }
