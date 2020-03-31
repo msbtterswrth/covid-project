@@ -75,7 +75,7 @@
 
           for ($i = 0; $i < count($stateData); $i++) {
             if ($stateData[$i]->state == $current_state) {
-              $new_tested = intval($stateData[$i]->total);
+              $new_tested = intval($stateData[$i]->totalTestResults);
               $new_infected = intval($stateData[$i]->positive);
               $new_deaths = intval($stateData[$i]->death);
 
