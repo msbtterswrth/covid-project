@@ -9,9 +9,9 @@
     {% endif %}
     <div class="text">
         <h1>{{ label }}</h1>
-        {{ content.body}}
         {% if content.field_byline.0 %}
             <div class="byline">{{ content.field_byline }}</div>
         {% endif %}
+        {{ content.body}}
     </div>
 </article>
