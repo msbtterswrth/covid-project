@@ -1,0 +1,35 @@
+uuid: a00ed8d2-8883-402e-8a32-aab32e7fbac2
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:component_block:27cb9816-2e94-4baf-ad95-e1eaa9af4d5b'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - base
+third_party_settings:
+  block_class:
+    classes: 'col-xs-12 col-sm-4'
+id: whatyouneedtoknow
+theme: base
+region: top
+weight: -7
+provider: null
+plugin: 'block_content:27cb9816-2e94-4baf-ad95-e1eaa9af4d5b'
+settings:
+  id: 'block_content:27cb9816-2e94-4baf-ad95-e1eaa9af4d5b'
+  label: 'What you need to know'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

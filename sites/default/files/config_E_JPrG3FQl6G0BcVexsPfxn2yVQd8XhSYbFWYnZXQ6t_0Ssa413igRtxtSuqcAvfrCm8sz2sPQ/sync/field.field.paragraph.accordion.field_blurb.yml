@@ -1,0 +1,21 @@
+uuid: c1959d9e-47db-4556-a404-97411dcf2e29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blurb
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - text
+id: paragraph.accordion.field_blurb
+field_name: field_blurb
+entity_type: paragraph
+bundle: accordion
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 513ad754-ec23-4750-a787-cfa68bce3e9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+name: 'Embed Code'
+format: embed_code
+weight: 0
+filters:
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

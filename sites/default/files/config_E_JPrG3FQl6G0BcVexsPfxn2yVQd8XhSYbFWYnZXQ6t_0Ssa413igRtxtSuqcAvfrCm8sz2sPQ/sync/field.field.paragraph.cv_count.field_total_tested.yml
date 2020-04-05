@@ -1,0 +1,23 @@
+uuid: 4fca0268-9dfe-463f-b450-6c550e53783d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_total_tested
+    - paragraphs.paragraphs_type.cv_count
+id: paragraph.cv_count.field_total_tested
+field_name: field_total_tested
+entity_type: paragraph
+bundle: cv_count
+label: 'Total Tested'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

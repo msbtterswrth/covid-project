@@ -1,0 +1,35 @@
+uuid: a0b177ca-9e0e-4b06-b4cf-18aa917cda8e
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:component_block:6932af25-f303-4621-abc1-67d1fc3299f0'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - base
+third_party_settings:
+  block_class:
+    classes: 'col-xs-12 col-sm-8'
+id: resources
+theme: base
+region: top
+weight: -6
+provider: null
+plugin: 'block_content:6932af25-f303-4621-abc1-67d1fc3299f0'
+settings:
+  id: 'block_content:6932af25-f303-4621-abc1-67d1fc3299f0'
+  label: Resources
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

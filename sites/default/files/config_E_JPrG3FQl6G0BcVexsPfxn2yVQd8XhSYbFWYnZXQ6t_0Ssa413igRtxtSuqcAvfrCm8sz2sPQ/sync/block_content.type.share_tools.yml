@@ -1,0 +1,8 @@
+uuid: 6e11d3ea-f84e-4855-a1f0-acf77944941e
+langcode: en
+status: true
+dependencies: {  }
+id: share_tools
+label: 'Share Tools'
+revision: 0
+description: ''

@@ -1,0 +1,45 @@
+uuid: beafe7b9-04b4-47bb-b2ac-d5f46fc2f959
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar
+    - node.type.article
+    - paragraphs.paragraphs_type.image_cta
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.article.field_sidebar
+field_name: field_sidebar
+entity_type: node
+bundle: article
+label: Sidebar
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image_cta: image_cta
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      from_library:
+        weight: 6
+        enabled: false
+      hero:
+        weight: 7
+        enabled: false
+      image_cta:
+        enabled: true
+        weight: 8
+      layout:
+        weight: 9
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

@@ -1,0 +1,48 @@
+uuid: 11eb83da-98d6-4b68-9002-45327f0d2966
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wysiwyg.field_background_color
+    - field.field.paragraph.wysiwyg.field_blurb
+    - field.field.paragraph.wysiwyg.field_heading_size
+    - field.field.paragraph.wysiwyg.field_title
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - options
+    - text
+id: paragraph.wysiwyg.default
+targetEntityType: paragraph
+bundle: wysiwyg
+mode: default
+content:
+  field_background_color:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_blurb:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading_size:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

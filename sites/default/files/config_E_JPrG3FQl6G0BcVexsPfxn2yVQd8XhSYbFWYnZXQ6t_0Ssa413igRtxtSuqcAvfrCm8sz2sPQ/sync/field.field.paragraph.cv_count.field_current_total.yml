@@ -1,0 +1,23 @@
+uuid: d7e00f25-e9c1-4f8c-aeb6-afcafec16ba6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_current_total
+    - paragraphs.paragraphs_type.cv_count
+id: paragraph.cv_count.field_current_total
+field_name: field_current_total
+entity_type: paragraph
+bundle: cv_count
+label: 'Current Total Infected'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

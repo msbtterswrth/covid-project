@@ -1,0 +1,59 @@
+uuid: 0a043ce4-c726-4229-a48e-ddbe90635604
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.component_block
+    - field.storage.block_content.field_component
+    - paragraphs.paragraphs_type.accordions
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.image_cta
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: block_content.component_block.field_component
+field_name: field_component
+entity_type: block_content
+bundle: component_block
+label: Component
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      from_library: from_library
+      hero: hero
+      image_cta: image_cta
+      accordions: accordions
+      columns: columns
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      from_library:
+        enabled: true
+        weight: 3
+      hero:
+        enabled: true
+        weight: 4
+      image_cta:
+        enabled: true
+        weight: 7
+      accordion:
+        weight: 8
+        enabled: false
+      accordions:
+        enabled: true
+        weight: 9
+      columns:
+        enabled: true
+        weight: 10
+      wysiwyg:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

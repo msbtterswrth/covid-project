@@ -1,0 +1,30 @@
+uuid: f7692431-2566-44b0-b79b-a1b5bc9a797a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.infected_us_map
+  module:
+    - system
+    - views
+  theme:
+    - base
+id: views_block__infected_us_map_block_3
+theme: base
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:infected_us_map-block_3'
+settings:
+  id: 'views_block:infected_us_map-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /us-tested
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 60b52374-ca86-4a4d-89ee-b817f4f86fd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_total_deaths
+    - paragraphs.paragraphs_type.cv_count
+id: paragraph.cv_count.field_total_deaths
+field_name: field_total_deaths
+entity_type: paragraph
+bundle: cv_count
+label: 'Total Deaths'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

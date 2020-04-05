@@ -1,0 +1,20 @@
+uuid: 9c8a3674-0527-4fc7-81f7-5ec2154446fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.share_tools
+id: block_content.share_tools.default
+targetEntityType: block_content
+bundle: share_tools
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

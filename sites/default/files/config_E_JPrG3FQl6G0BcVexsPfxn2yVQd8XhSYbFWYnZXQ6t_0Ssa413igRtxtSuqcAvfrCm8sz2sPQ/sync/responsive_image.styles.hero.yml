@@ -1,0 +1,42 @@
+uuid: 2c4ddd6c-1cad-4b3f-8c47-9f69e8bdf94b
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.1200x900
+    - image.style.1600x900
+    - image.style.2000x800
+    - image.style.600x900
+    - image.style.800x600
+  theme:
+    - base
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: base.xl
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 2000x800
+  -
+    breakpoint_id: base.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 1600x900
+  -
+    breakpoint_id: base.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 1200x900
+  -
+    breakpoint_id: base.sm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 800x600
+  -
+    breakpoint_id: base.xs
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: 600x900
+breakpoint_group: base
+fallback_image_style: 800x600

@@ -1,0 +1,56 @@
+uuid: 9957c978-b465-4526-99eb-8ff1b9c34f7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.page
+    - paragraphs.paragraphs_type.accordions
+    - paragraphs.paragraphs_type.cv_count
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.page.field_content
+field_name: field_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordions: accordions
+      cv_count: cv_count
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      accordion:
+        weight: 8
+        enabled: false
+      accordions:
+        enabled: true
+        weight: 9
+      from_library:
+        weight: 10
+        enabled: false
+      columns:
+        weight: 11
+        enabled: false
+      hero:
+        weight: 11
+        enabled: false
+      cv_count:
+        enabled: true
+        weight: 12
+      image_cta:
+        weight: 12
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: 14
+field_type: entity_reference_revisions

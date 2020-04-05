@@ -1,0 +1,21 @@
+uuid: 1eb709d6-06ed-4afb-bd28-aef9cb7e171c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blurb
+    - paragraphs.paragraphs_type.image_cta
+  module:
+    - text
+id: paragraph.image_cta.field_blurb
+field_name: field_blurb
+entity_type: paragraph
+bundle: image_cta
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

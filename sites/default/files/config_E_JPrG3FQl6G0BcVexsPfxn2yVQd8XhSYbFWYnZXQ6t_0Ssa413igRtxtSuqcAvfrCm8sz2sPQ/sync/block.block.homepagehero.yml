@@ -1,0 +1,31 @@
+uuid: bcbad5b9-39fb-4816-a537-b62f8f2622a3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:component_block:b58ba67b-8675-4469-932d-cf2e6ff768a2'
+  module:
+    - block_content
+    - system
+  theme:
+    - base
+id: homepagehero
+theme: base
+region: banner
+weight: 0
+provider: null
+plugin: 'block_content:b58ba67b-8675-4469-932d-cf2e6ff768a2'
+settings:
+  id: 'block_content:b58ba67b-8675-4469-932d-cf2e6ff768a2'
+  label: 'Homepage Hero'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

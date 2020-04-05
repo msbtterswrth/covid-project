@@ -1,0 +1,17 @@
+uuid: 88b98ee2-fe65-4cb3-aebd-73d90fa95098
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 600x900
+label: '600x900 (2:3)'
+effects:
+  fdf30d9e-f25c-4c0a-aa13-c22af02d7cb6:
+    uuid: fdf30d9e-f25c-4c0a-aa13-c22af02d7cb6
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 900
+      crop_type: focal_point

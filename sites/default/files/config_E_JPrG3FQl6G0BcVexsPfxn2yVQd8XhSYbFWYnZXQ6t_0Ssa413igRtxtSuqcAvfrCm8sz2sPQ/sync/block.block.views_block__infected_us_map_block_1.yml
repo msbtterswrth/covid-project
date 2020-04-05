@@ -1,0 +1,30 @@
+uuid: 39a92a6b-2180-4dcc-b82c-5c50a713a9d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.infected_us_map
+  module:
+    - system
+    - views
+  theme:
+    - base
+id: views_block__infected_us_map_block_1
+theme: base
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:infected_us_map-block_1'
+settings:
+  id: 'views_block:infected_us_map-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /infected-national
+    negate: false
+    context_mapping: {  }

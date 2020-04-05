@@ -1,0 +1,30 @@
+uuid: 8fe33c12-81c3-4ae4-a1ab-5584338be70a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.infected_us_map
+  module:
+    - system
+    - views
+  theme:
+    - base
+id: views_block__infected_us_map_block_2
+theme: base
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:infected_us_map-block_2'
+settings:
+  id: 'views_block:infected_us_map-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /us-deaths
+    negate: false
+    context_mapping: {  }

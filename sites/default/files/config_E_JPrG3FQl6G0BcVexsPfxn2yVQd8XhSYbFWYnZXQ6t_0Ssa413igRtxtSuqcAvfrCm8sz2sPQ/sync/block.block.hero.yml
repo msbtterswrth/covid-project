@@ -1,0 +1,30 @@
+uuid: 2e9830a4-406b-48b6-95d4-c8cd812e4a84
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node_block
+  theme:
+    - base
+id: hero
+theme: base
+region: banner
+weight: 0
+provider: null
+plugin: node_block
+settings:
+  id: node_block
+  label: Hero
+  provider: node_block
+  label_display: '0'
+  theme_suggestion: hero
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

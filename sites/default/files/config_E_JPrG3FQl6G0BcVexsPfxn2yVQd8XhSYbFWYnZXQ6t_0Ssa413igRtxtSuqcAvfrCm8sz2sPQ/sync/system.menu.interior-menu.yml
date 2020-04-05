@@ -1,0 +1,8 @@
+uuid: 9fa5bc21-076a-4cf0-a22d-6f485849e7b1
+langcode: en
+status: true
+dependencies: {  }
+id: interior-menu
+label: 'Interior Menu'
+description: ''
+locked: false

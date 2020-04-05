@@ -1,0 +1,31 @@
+uuid: b711a82a-156e-4104-b19c-6008b8c76abc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:863564b7-0fd3-4c91-8f1a-1f7a4df1b225'
+  module:
+    - block_content
+    - system
+  theme:
+    - base
+id: twittertimeline
+theme: base
+region: content_bottom
+weight: -9
+provider: null
+plugin: 'block_content:863564b7-0fd3-4c91-8f1a-1f7a4df1b225'
+settings:
+  id: 'block_content:863564b7-0fd3-4c91-8f1a-1f7a4df1b225'
+  label: 'Twitter timeline'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
