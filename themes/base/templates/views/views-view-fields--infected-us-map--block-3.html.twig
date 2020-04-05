@@ -3,16 +3,16 @@
 {% if counter == 1  %}
 {% set infocount = field.content|trim %}
   {% if infocount >= 100000 %}
-  {% set color = '#21bf19' %}
+  {% set color = '#0343d5' %}
   {% endif %}
   {% if infocount < 100000 and infocount >= 10000  %}
-  {% set color = '#209d37' %}
+  {% set color = '#3e79fe' %}
   {% endif %}
   {% if infocount < 10000 and infocount >= 1000 %}
-  {% set color = '#1f6f5f' %}
+  {% set color = '#6291fe' %}
   {% endif %}
   {% if infocount  < 1000 %}
-  {% set color = '#1e4088' %}
+  {% set color = '#bacffe' %}
   {% endif %}
 
 {% endif %}
