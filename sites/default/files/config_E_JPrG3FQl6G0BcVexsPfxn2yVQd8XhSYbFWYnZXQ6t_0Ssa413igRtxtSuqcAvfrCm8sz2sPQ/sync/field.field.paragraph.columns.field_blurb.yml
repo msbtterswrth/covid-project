@@ -1,0 +1,21 @@
+uuid: f2c81563-57e1-4517-9366-099a5f59dc7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blurb
+    - paragraphs.paragraphs_type.columns
+  module:
+    - text
+id: paragraph.columns.field_blurb
+field_name: field_blurb
+entity_type: paragraph
+bundle: columns
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

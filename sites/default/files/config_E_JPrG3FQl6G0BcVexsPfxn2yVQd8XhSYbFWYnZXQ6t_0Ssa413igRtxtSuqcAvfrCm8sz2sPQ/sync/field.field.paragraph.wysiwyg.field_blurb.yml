@@ -1,0 +1,21 @@
+uuid: 8e554da3-e9a2-46dd-a015-a7a18423fce9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blurb
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - text
+id: paragraph.wysiwyg.field_blurb
+field_name: field_blurb
+entity_type: paragraph
+bundle: wysiwyg
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

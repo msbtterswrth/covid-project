@@ -1,0 +1,19 @@
+uuid: f37743fd-6e2a-4a16-86fe-bb80e2fa4efa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.wysiwyg
+id: paragraph.wysiwyg.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: wysiwyg
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

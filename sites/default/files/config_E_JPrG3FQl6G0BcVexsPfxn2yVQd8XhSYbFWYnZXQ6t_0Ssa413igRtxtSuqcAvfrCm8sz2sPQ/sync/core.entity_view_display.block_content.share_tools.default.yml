@@ -1,0 +1,12 @@
+uuid: f9aaa58f-9670-4662-9a1e-d6eb00f8cc66
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.share_tools
+id: block_content.share_tools.default
+targetEntityType: block_content
+bundle: share_tools
+mode: default
+content: {  }
+hidden: {  }

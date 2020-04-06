@@ -1,0 +1,21 @@
+uuid: e015a457-42a9-4704-8101-49155532d279
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_state_code
+    - paragraphs.paragraphs_type.cv_count
+  module:
+    - options
+id: paragraph.cv_count.field_state_code
+field_name: field_state_code
+entity_type: paragraph
+bundle: cv_count
+label: 'State Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

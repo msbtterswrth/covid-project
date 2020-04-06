@@ -1,0 +1,15 @@
+uuid: 12218044-f6b1-48c9-bb49-08f8539ddcf1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: image_cta
+label: 'Image CTA'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

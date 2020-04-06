@@ -1,0 +1,39 @@
+uuid: 79459b76-23ee-41c1-aa30-1d89a3045dec
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_layout
+field_name: field_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one
+      label: 'One Column'
+    -
+      value: two
+      label: 'Two Column'
+    -
+      value: 'two right'
+      label: 'Two Column, Large Right Column'
+    -
+      value: 'two left'
+      label: 'Two Column, Large Left Column'
+    -
+      value: three
+      label: 'Three Column'
+    -
+      value: four
+      label: 'Four Column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

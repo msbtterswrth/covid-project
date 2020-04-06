@@ -1,0 +1,21 @@
+uuid: c71c6900-6e7e-4660-92d9-12e8b64ee8d0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'
+  og_url: '[current-page:url]'
+  og_image: '[node:field_image:entity:url]'
+  og_site_name: 'The Coronavirus Project'
+  og_title: '[current-page:title]'
+  og_type: Article
+  twitter_cards_title: '[current-page:title]'
+  twitter_cards_type: summary_large_image
+  twitter_cards_site: '@AltGovCovid19'
+  twitter_cards_image: '[node:field_image:entity:url]'
+  twitter_cards_page_url: '[current-page:url]'

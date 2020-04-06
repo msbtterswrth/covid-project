@@ -1,0 +1,45 @@
+uuid: e8f4a52d-39c3-4c40-8bcb-116d6c045617
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary
+      label: Primary
+    -
+      value: 'primary outline'
+      label: 'Primary Outline'
+    -
+      value: secondary
+      label: Secondary
+    -
+      value: 'secondary outline'
+      label: 'Secondary Outline'
+    -
+      value: tertiary
+      label: Tertiary
+    -
+      value: 'tertiary outline'
+      label: 'Tertiary Outline'
+    -
+      value: gray
+      label: Gray
+    -
+      value: 'gray outline'
+      label: 'Gray Outline'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,61 @@
+uuid: 45b1b168-d345-41cc-acc8-d7825c436ca8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.accordions
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_content
+field_name: field_content
+entity_type: node
+bundle: landing_page
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordions: accordions
+      columns: columns
+      form: form
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      accordion:
+        weight: 9
+        enabled: false
+      accordions:
+        enabled: true
+        weight: 10
+      columns:
+        enabled: true
+        weight: 11
+      cv_count:
+        weight: 12
+        enabled: false
+      from_library:
+        weight: 13
+        enabled: false
+      form:
+        enabled: true
+        weight: 14
+      hero:
+        weight: 14
+        enabled: false
+      image_cta:
+        weight: 15
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

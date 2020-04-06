@@ -1,0 +1,21 @@
+uuid: 465aea7a-8d99-479c-b169-f4321872b748
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_embed_code
+    - paragraphs.paragraphs_type.us_maps
+  module:
+    - text
+id: paragraph.us_maps.field_embed_code
+field_name: field_embed_code
+entity_type: paragraph
+bundle: us_maps
+label: 'Embed Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+uuid: 38c9b619-df78-44a5-9412-653d604b5781
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  title: 'The COVID-19 Project'
+  shortlink: '[site:url]'
+  og_description: 'A crowdsourced effort to compile verified information surrounding the COVID-19 pandemic into one easily accessible place.'
+  og_url: '[site:url]'
+  og_image: '/sites/default/files/styles/800x600/public/2020-03/covid.png?h=c74750f6&itok=6iLsfdeF'
+  og_image_url: '/sites/default/files/styles/800x600/public/2020-03/covid.png?h=c74750f6&itok=6iLsfdeF'
+  og_site_name: 'The Coronavirus Project'
+  og_title: 'The Coronavirus Project'
+  og_type: Article
+  twitter_cards_title: 'The Coronavirus Project'
+  twitter_cards_type: summary_large_image
+  twitter_cards_site: '@AltGovCovid19'
+  twitter_cards_image: '/sites/default/files/styles/800x600/public/2020-03/covid.png?h=c74750f6&itok=6iLsfdeF'
+  twitter_cards_page_url: www.covid19-project.org
+  twitter_cards_description: 'A crowdsourced effort to compile verified information surrounding the COVID-19 pandemic into one easily accessible place.'

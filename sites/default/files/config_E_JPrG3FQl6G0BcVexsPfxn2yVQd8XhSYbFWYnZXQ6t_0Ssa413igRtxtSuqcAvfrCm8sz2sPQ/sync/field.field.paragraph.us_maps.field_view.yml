@@ -1,0 +1,48 @@
+uuid: 9d1b34a7-4803-4b4c-ac52-b2e43e805d87
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_view
+    - paragraphs.paragraphs_type.us_maps
+  module:
+    - viewfield
+id: paragraph.us_maps.field_view
+field_name: field_view
+entity_type: paragraph
+bundle: us_maps
+label: View
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  force_default: false
+  allowed_views:
+    comment: '0'
+    content: '0'
+    block_content: '0'
+    files: '0'
+    frontpage: '0'
+    infected_us_map: '0'
+    media: '0'
+    media_library: '0'
+    paragraphs_library: '0'
+    user_admin_people: '0'
+    comments_recent: '0'
+    content_recent: '0'
+    taxonomy_term: '0'
+    watchdog: '0'
+    webform_submissions: '0'
+    who_s_new: '0'
+    who_s_online: '0'
+  allowed_display_types:
+    block: block
+    embed: '0'
+    feed: '0'
+    default: '0'
+    page: '0'
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

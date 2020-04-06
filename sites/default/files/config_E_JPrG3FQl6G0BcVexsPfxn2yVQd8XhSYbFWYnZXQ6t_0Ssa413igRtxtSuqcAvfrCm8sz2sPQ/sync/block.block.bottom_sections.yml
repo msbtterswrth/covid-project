@@ -1,0 +1,29 @@
+uuid: 0654ec97-348b-42c9-aa49-45aee752f445
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node_block
+  theme:
+    - base
+id: bottom_sections
+theme: base
+region: feature
+weight: -10
+provider: null
+plugin: node_block
+settings:
+  id: node_block
+  label: 'Bottom Sections'
+  provider: node_block
+  label_display: '0'
+  theme_suggestion: bottom_sections
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

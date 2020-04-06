@@ -1,0 +1,33 @@
+uuid: b9c67c66-c0c3-44ac-92cd-a76080f4f121
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.us_maps.field_embed_code
+    - field.field.paragraph.us_maps.field_view
+    - paragraphs.paragraphs_type.us_maps
+  module:
+    - text
+    - viewfield
+id: paragraph.us_maps.default
+targetEntityType: paragraph
+bundle: us_maps
+mode: default
+content:
+  field_embed_code:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_view:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: viewfield_select
+    region: content
+hidden:
+  created: true
+  status: true

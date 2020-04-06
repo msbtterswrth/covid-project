@@ -1,0 +1,34 @@
+uuid: eed1e12d-cd2d-4fd2-bc80-47e6c2a36309
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.us_maps.field_embed_code
+    - field.field.paragraph.us_maps.field_view
+    - paragraphs.paragraphs_type.us_maps
+  module:
+    - text
+    - viewfield
+id: paragraph.us_maps.default
+targetEntityType: paragraph
+bundle: us_maps
+mode: default
+content:
+  field_embed_code:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_view:
+    weight: 1
+    label: hidden
+    settings:
+      view_title: hidden
+      empty_view_title: hidden
+      always_build_output: false
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+hidden: {  }

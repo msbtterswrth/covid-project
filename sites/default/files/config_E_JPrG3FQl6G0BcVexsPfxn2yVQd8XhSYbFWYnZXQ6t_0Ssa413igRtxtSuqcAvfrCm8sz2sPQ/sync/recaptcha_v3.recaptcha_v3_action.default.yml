@@ -1,0 +1,8 @@
+uuid: 50b2b89a-616d-4e11-b771-f89165a6f3a1
+langcode: en
+status: true
+dependencies: {  }
+id: default
+label: default
+threshold: '1'
+challenge: default

@@ -1,0 +1,31 @@
+uuid: f2a20ddc-6fd4-4295-b2a0-b91860c3ceef
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:component_block:f27f94a0-6686-4646-ad92-7e140d0cec10'
+  module:
+    - block_content
+    - system
+  theme:
+    - base
+id: homepagelayout
+theme: base
+region: top
+weight: 0
+provider: null
+plugin: 'block_content:f27f94a0-6686-4646-ad92-7e140d0cec10'
+settings:
+  id: 'block_content:f27f94a0-6686-4646-ad92-7e140d0cec10'
+  label: 'Homepage Layout'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

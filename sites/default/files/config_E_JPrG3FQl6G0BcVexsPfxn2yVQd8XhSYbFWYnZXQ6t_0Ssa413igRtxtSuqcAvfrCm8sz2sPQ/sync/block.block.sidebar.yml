@@ -1,0 +1,30 @@
+uuid: 59ce99c5-6e60-4885-aca9-d8a1ad6c0ac0
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node_block
+  theme:
+    - base
+id: sidebar
+theme: base
+region: sidebar_bottom
+weight: -9
+provider: null
+plugin: node_block
+settings:
+  id: node_block
+  label: Sidebar
+  provider: node_block
+  label_display: '0'
+  theme_suggestion: sidebar
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

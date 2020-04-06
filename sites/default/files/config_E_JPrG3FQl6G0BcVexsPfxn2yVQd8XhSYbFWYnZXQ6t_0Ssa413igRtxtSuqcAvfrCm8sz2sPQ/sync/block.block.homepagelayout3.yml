@@ -1,0 +1,31 @@
+uuid: 5b6f757c-966c-4f2f-ae3e-a4e74dab4ab6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:component_block:8e5ba6c2-4d1c-4d72-83ed-a77f786cbe65'
+  module:
+    - block_content
+    - system
+  theme:
+    - base
+id: homepagelayout3
+theme: base
+region: top
+weight: 0
+provider: null
+plugin: 'block_content:8e5ba6c2-4d1c-4d72-83ed-a77f786cbe65'
+settings:
+  id: 'block_content:8e5ba6c2-4d1c-4d72-83ed-a77f786cbe65'
+  label: 'Homepage Layout 3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

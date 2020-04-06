@@ -1,0 +1,25 @@
+uuid: 39ae6774-0755-4440-a143-04960342015f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:component_block:38099add-e208-4949-9c3b-c49fc9baf609'
+  module:
+    - block_content
+  theme:
+    - base
+id: footer
+theme: base
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:38099add-e208-4949-9c3b-c49fc9baf609'
+settings:
+  id: 'block_content:38099add-e208-4949-9c3b-c49fc9baf609'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

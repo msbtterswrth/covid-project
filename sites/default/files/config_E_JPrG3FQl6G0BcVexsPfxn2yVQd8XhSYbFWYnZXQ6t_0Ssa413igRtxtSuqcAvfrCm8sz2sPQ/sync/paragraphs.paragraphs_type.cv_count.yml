@@ -1,0 +1,10 @@
+uuid: e96244d2-99e5-42d7-960a-a1c1279f08d4
+langcode: en
+status: true
+dependencies: {  }
+id: cv_count
+label: 'CV Count'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

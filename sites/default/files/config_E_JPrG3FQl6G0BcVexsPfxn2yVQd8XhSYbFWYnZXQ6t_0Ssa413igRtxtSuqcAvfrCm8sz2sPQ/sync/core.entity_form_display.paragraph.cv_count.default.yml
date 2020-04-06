@@ -1,0 +1,45 @@
+uuid: afebee71-546c-46ad-a48a-207d2824d9ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cv_count.field_current_total
+    - field.field.paragraph.cv_count.field_state_code
+    - field.field.paragraph.cv_count.field_total_deaths
+    - field.field.paragraph.cv_count.field_total_tested
+    - paragraphs.paragraphs_type.cv_count
+id: paragraph.cv_count.default
+targetEntityType: paragraph
+bundle: cv_count
+mode: default
+content:
+  field_current_total:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_state_code:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_total_deaths:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_total_tested:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true

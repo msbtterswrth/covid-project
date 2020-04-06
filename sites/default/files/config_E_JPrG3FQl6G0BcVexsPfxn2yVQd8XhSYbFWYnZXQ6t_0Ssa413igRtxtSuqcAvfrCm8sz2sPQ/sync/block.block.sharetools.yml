@@ -1,0 +1,33 @@
+uuid: 0e8669dd-c894-4f9f-9c7a-a2167e9286ca
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:share_tools:bfc9250a-3f18-41ed-aeca-1ab81b971b8d'
+  module:
+    - block_content
+    - ctools
+  theme:
+    - base
+id: sharetools
+theme: base
+region: sidebar_bottom
+weight: 0
+provider: null
+plugin: 'block_content:bfc9250a-3f18-41ed-aeca-1ab81b971b8d'
+settings:
+  id: 'block_content:bfc9250a-3f18-41ed-aeca-1ab81b971b8d'
+  label: 'Share Tools'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
