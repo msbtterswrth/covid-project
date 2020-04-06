@@ -1,0 +1,59 @@
+uuid: 87ce16ce-365d-4459-8c4c-d5fd1e774306
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bottom_sections
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.columns
+    - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_bottom_sections
+field_name: field_bottom_sections
+entity_type: node
+bundle: landing_page
+label: 'Bottom Sections'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      columns: columns
+      form: form
+      wysiwyg: wysiwyg
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      accordions:
+        weight: 11
+        enabled: false
+      columns:
+        enabled: true
+        weight: 12
+      cv_count:
+        weight: 13
+        enabled: false
+      form:
+        enabled: true
+        weight: 14
+      from_library:
+        weight: 15
+        enabled: false
+      hero:
+        weight: 16
+        enabled: false
+      image_cta:
+        weight: 17
+        enabled: false
+      wysiwyg:
+        enabled: true
+        weight: 18
+field_type: entity_reference_revisions

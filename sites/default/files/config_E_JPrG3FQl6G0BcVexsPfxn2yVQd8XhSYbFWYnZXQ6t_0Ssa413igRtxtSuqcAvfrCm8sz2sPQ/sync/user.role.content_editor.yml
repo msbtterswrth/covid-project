@@ -1,0 +1,38 @@
+uuid: f1ce3d99-8ec8-4b12-8671-acba68d7fcb5
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content Editor'
+weight: -8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access in-place editing'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer block_content form display'
+  - 'administer blocks'
+  - 'administer comment form display'
+  - 'administer comments'
+  - 'administer node form display'
+  - 'administer paragraphs settings'
+  - 'administer paragraphs_library_item form display'
+  - 'administer taxonomy'
+  - 'administer taxonomy_term form display'
+  - 'cancel account'
+  - 'change own username'
+  - 'create page content'
+  - 'create terms in tags'
+  - 'delete any page content'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit any page content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert page revisions'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'

@@ -8,6 +8,7 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  title: 'The COVID-19 Project'
   shortlink: '[site:url]'
   og_description: 'A crowdsourced effort to compile verified information surrounding the COVID-19 pandemic into one easily accessible place.'
   og_url: '[site:url]'

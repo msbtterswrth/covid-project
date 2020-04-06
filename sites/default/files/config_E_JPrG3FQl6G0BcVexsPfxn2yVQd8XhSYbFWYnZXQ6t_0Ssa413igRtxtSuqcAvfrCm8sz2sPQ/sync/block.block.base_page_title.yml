@@ -1,8 +1,9 @@
 uuid: eedb20bb-03b3-42f7-bb20-97b98e160c02
 langcode: en
-status: false
+status: true
 dependencies:
   module:
+    - ctools
     - system
   theme:
     - base
@@ -11,7 +12,7 @@ _core:
 id: base_page_title
 theme: base
 region: content
-weight: -4
+weight: -9
 provider: null
 plugin: page_title_block
 settings:
@@ -22,6 +23,13 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: ''
     negate: true
     context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

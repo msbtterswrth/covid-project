@@ -11,13 +11,13 @@ entity_type: paragraph
 bundle: cv_count
 label: 'Total Deaths'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
-  max: null
+  min: 0
+  max: 999999
   prefix: ''
   suffix: ''
 field_type: integer

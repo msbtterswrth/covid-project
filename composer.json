@@ -18,7 +18,6 @@
         "composer/installers": "^1.2",
         "drupal/address": "^1.8",
         "drupal/admin_toolbar": "^2.0",
-        "drupal/backup_migrate": "^4.1",
         "drupal/block_class": "^1.1",
         "drupal/captcha": "^1.0",
         "drupal/core-composer-scaffold": "^8.8",
@@ -39,7 +38,7 @@
         "drupal/recaptcha": "^2.5",
         "drupal/recaptcha_v3": "^1.1",
         "drupal/smart_trim": "^1.2",
-        "drupal/views_conditional": "^1.0",
+        "drupal/viewfield": "^3.0@beta",
         "drupal/webform": "^5.8"
     },
     "require-dev": {

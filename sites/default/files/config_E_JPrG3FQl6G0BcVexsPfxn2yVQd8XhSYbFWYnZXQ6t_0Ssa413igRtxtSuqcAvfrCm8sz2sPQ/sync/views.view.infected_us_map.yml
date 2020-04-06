@@ -465,7 +465,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: 'Infected in US Block'
     position: 1
     display_options:
       display_extenders: {  }
@@ -771,6 +771,7 @@ display:
           plugin_id: custom
       defaults:
         fields: false
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -784,7 +785,7 @@ display:
   block_2:
     display_plugin: block
     id: block_2
-    display_title: Block
+    display_title: 'Deaths in US'
     position: 1
     display_options:
       display_extenders: {  }
@@ -1093,6 +1094,7 @@ display:
         title: false
       title: 'US Covid-19 Deaths'
       block_description: DEATHS
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -1106,7 +1108,7 @@ display:
   block_3:
     display_plugin: block
     id: block_3
-    display_title: Block
+    display_title: 'Tested in US'
     position: 1
     display_options:
       display_extenders: {  }
@@ -1431,6 +1433,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

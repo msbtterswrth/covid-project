@@ -1,0 +1,46 @@
+uuid: 9ffe4c64-4f1a-4a89-a0a4-91380335939f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.landing_page.field_bottom_sections
+    - field.field.node.landing_page.field_content
+    - field.field.node.landing_page.field_hero
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_metatags
+    - node.type.landing_page
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.landing_page.full
+targetEntityType: node
+bundle: landing_page
+mode: full
+content:
+  field_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_metatags:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_bottom_sections: true
+  field_hero: true
+  field_image: true

@@ -1,0 +1,7 @@
+site_key: 6LdAX-QUAAAAAMMnzyFFXELihbRUT-glryiQtR2h
+secret_key: 6LdAX-QUAAAAAPwN8eTDPVWvyVspT_15tX7z2qP6
+verify_hostname: false
+default_challenge: recaptcha/reCAPTCHA
+error_message: 'Antibot verification failed.'
+_core:
+  default_config_hash: 8mouEvKHOpLZ8hYj0mvRaDTJVboSRvr2WwMo8slktrs

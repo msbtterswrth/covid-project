@@ -1,0 +1,31 @@
+uuid: 8a0b968e-2e9f-4103-afd2-dd246cbfaea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.form.field_background_color
+    - field.field.paragraph.form.field_form
+    - paragraphs.paragraphs_type.form
+  module:
+    - webform
+id: paragraph.form.default
+targetEntityType: paragraph
+bundle: form
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_form:
+    weight: 1
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+hidden:
+  created: true
+  status: true

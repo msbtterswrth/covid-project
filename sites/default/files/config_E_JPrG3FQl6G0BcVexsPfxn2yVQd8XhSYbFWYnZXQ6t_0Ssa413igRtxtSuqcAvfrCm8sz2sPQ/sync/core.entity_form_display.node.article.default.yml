@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.field_hero
+    - field.field.node.article.field_byline
+    - field.field.node.article.field_category
     - field.field.node.article.field_image
     - field.field.node.article.field_sidebar
     - field.field.node.article.field_tags
@@ -20,7 +21,6 @@ third_party_settings:
   field_group:
     group_tabs:
       children:
-        - group_hero
         - group_content
         - group_sidebar
       parent_name: ''
@@ -34,6 +34,8 @@ third_party_settings:
       label: tabs
     group_content:
       children:
+        - field_category
+        - field_byline
         - body
         - field_image
         - field_tags
@@ -62,20 +64,6 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Sidebar
-    group_hero:
-      children:
-        - field_hero
-      parent_name: group_tabs
-      weight: 20
-      format_type: tab
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: Hero
 _core:
   default_config_hash: vPb_yvhA-xuNoV_yOmOwYxGuHNRIH1CoMK2qi7BSga0
 id: node.article.default
@@ -85,7 +73,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 5
+    weight: 32
     region: content
     settings:
       rows: 9
@@ -99,21 +87,27 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_hero:
-    type: entity_reference_paragraphs
-    weight: 11
+  field_byline:
+    weight: 31
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_category:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_image:
     type: image_image
-    weight: 6
+    weight: 33
     region: content
     settings:
       progress_indicator: throbber
@@ -133,7 +127,7 @@ content:
     region: content
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 7
+    weight: 34
     region: content
     settings:
       match_operator: CONTAINS
